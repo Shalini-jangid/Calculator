@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png">
+    <style>
+        *{
+            cursor: pointer;
+            
+        }
+        .container{
+            margin: auto;
+            width: 350px;
+            height: 520px;
+            background-color: #3a4452;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .calcalutor{
+            background-color: #3a4452;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .button{
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+            background: transparent;
+            font-size: 20px;
+            color: #fff;
+            margin: 10px;
+            border: 0;
+        }
+        body{
+            background: linear-gradient(#0a0a0a,#3a4452);
+            height: 91.5vh;
+        }
+        #type{
+            width: 280px;
+            border: none;
+            padding: 24px;
+            margin: 10px;
+            background: transparent;
+            box-shadow: 0px 3px 15px rgbs(84,84,84,0.1);
+            font-size: 40px;
+            text-align: right;
+        }
+        .result{
+            height: 58px;
+            width: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+    <form>
+        <div class="display">
+            <input type="text" name="abc" id="type" readonly>
+        </div>
+
+    <div>
+<input type="button" class="button" value="AC" onclick="abc.value=''">
+<input type="button" class="button" value="DEL" onclick="abc.value= abc.value.toString().slice(0,-1)">
+<input type="button" class="button" value="." onclick="abc.value+='.'">
+<input type="button" class="button" value="/" onclick="abc.value+='/'">
+<input type="button" class="button" value="7" onclick="abc.value+='7'">
+<input type="button" class="button" value="8" onclick="abc.value+='8'">
+<input type="button" class="button" value="9" onclick="abc.value+='9'">
+<input type="button" class="button" value="*" onclick="abc.value+='*'">
+<input type="button" class="button" value="4" onclick="abc.value+='4'">
+<input type="button" class="button" value="5" onclick="abc.value+='5'">
+<input type="button" class="button" value="6" onclick="abc.value+='6'">
+<input type="button" class="button" value="-" onclick="abc.value+='-'">
+<input type="button" class="button" value="1" onclick="abc.value+='1'">
+<input type="button" class="button" value="2" onclick="abc.value+='2'">
+<input type="button" class="button" value="3" onclick="abc.value+='3'">
+<input type="button" class="button" value="+" onclick="abc.value+='+'">
+<input type="button" class="button" value="00" onclick="abc.value+='00'">
+<input type="button" class="button" value="0" onclick="abc.value+='0'">
+<input type="button" class="button result" value="=" onclick="abc.value = eval(abc.value)">
+
+</form>
+ </div>
+</div>
+</div>
+</body>
+</html>
